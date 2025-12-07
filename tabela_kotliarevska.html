@@ -1,64 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Tabela – Kotliarevska Polina</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Typy plików i ich cechy</title>
+<style>
+  :root{
+    --border-red: #ff0000;
+    --header-blue: #000066;
+    --cell-light: #bdd6ee;
+
+    /* JEDEN kolor dla całej kolumny Typ pliku */
+    --type-color: #ffc000;   /* złoto-pomarańczowy */
+
+    --ext-pink: #f58b91;
+    --desc-red: #ff7c80;
+    --prog-pink: #e3a3b0;
+    --kind-pink: #e89ba5;
+
+    --video-blue: #2e74b5;
+  }
+
+  body {
+    background: #ffffff;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    margin: 18px;
+  }
+
+  .center { text-align: center; }
+
+  .title-wrap {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 4px solid var(--border-red);
+    border-bottom: none;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .table-outer {
+    border: 4px solid var(--border-red);
+    margin-top: -4px;
+    max-width: 920px;
+    overflow: hidden;
+  }
+
+  table.typy {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  th, td {
+    border: 2px solid var(--border-red);
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  thead th {
+    background: var(--header-blue);
+    color: white;
+  }
+
+  tbody td {
+    background: var(--cell-light);
+    color: var(--desc-red);
+  }
+
+  /* KOLUMNA Typ pliku – JEDEN kolor złoto-pomarańczowy */
+  .col-type { 
+    color: var(--type-color);
+    font-weight: 800;
+  }
+
+  /* ostatni wiersz video */
+  .video-row td {
+    background: var(--video-blue) !important;
+    color: white !important;
+  }
+
+  .source {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+</style>
 </head>
+<body>
 
-<body style="background-color:#e9f9e9; font-family:Arial;">
+<div class="center">
+  <div class="title-wrap">Typy plików i ich cechy</div>
+</div>
 
-<p style="margin:20px;">
-  <a href="menu_kotliarevska.html" style="font-weight:bold;">« Wróć do menu</a>
-</p>
+<div class="table-outer">
+<table class="typy">
+  <thead>
+    <tr>
+      <th>Typ pliku</th>
+      <th>Rozszerzenie</th>
+      <th>Opis</th>
+      <th>Program otwierający</th>
+      <th>Rodzaj pliku</th>
+    </tr>
+  </thead>
 
-<h1 style="text-align:center;">Dane komputerowe – Kotliarevska Polina 2Fg1</h1>
+  <tbody>
+    <tr>
+      <td class="col-type">PDF</td>
+      <td>.pdf</td>
+      <td>Format dokumentu</td>
+      <td>Adobe Reader</td>
+      <td>Dokument</td>
+    </tr>
 
-<table style="width:90%; margin:0 auto; border-collapse:collapse; border:4px solid #2a7ae2;">
+    <tr>
+      <td class="col-type">Obraz bitmapowy</td>
+      <td>.bmp</td>
+      <td>Plik graficzny, bez kompresji</td>
+      <td>Paint, Photoshop</td>
+      <td>Obraz</td>
+    </tr>
 
-  <tr style="background:#d9eaff; font-weight:bold;">
-    <th>Model karty</th>
-    <th>Taktowanie</th>
-    <th>Rozmiar pamięci</th>
-    <th>Szyna</th>
-    <th>Chłodzenie</th>
-    <th>Uwagi</th>
-  </tr>
+    <tr>
+      <td class="col-type">Word</td>
+      <td>.docx</td>
+      <td>Dokument tekstowy</td>
+      <td>Microsoft Word</td>
+      <td>Dokument</td>
+    </tr>
 
-  <tr>
-    <td>RTX 3090</td><td>1395</td><td>24 GB</td><td>384-bit</td><td>Aktywne</td><td>Wysoka wydajność</td>
-  </tr>
+    <tr>
+      <td class="col-type">Archiwum ZIP</td>
+      <td>.zip</td>
+      <td>Skompresowany folder</td>
+      <td>WinRAR, 7-Zip</td>
+      <td>Archiwum</td>
+    </tr>
 
-  <tr>
-    <td>RTX 3080</td><td>1440</td><td>10 GB</td><td>320-bit</td><td>Aktywne</td><td>Popularna</td>
-  </tr>
-
-  <tr>
-    <td>RTX 3070</td><td>1500</td><td>8 GB</td><td>256-bit</td><td>Aktywne</td><td>Dobra cena / wydajność</td>
-  </tr>
-
-  <tr>
-    <td>GTX Series</td><td>—</td><td>6–8 GB</td><td>128–192-bit</td><td>Różne</td><td>Tanie modele</td>
-  </tr>
-
-  <tr>
-    <td>GTX 1660</td><td>1785</td><td>6 GB</td><td>192-bit</td><td>Aktywne</td><td>Do gier 1080p</td>
-  </tr>
-
-  <tr>
-    <td>GTX 1050</td><td>1455</td><td>2–4 GB</td><td>128-bit</td><td>Pasywne</td><td>Do biura</td>
-  </tr>
-
-  <tr>
-    <td>RX 6800</td><td>1700</td><td>16 GB</td><td>256-bit</td><td>Aktywne</td><td>Konkurencja dla RTX</td>
-  </tr>
-
-  <tr>
-    <td>RX 5600</td><td>1375</td><td>6 GB</td><td>192-bit</td><td>Aktywne</td><td>Dobra cena</td>
-  </tr>
-
+    <tr class="video-row">
+      <td class="col-type">Video</td>
+      <td>.mp4</td>
+      <td>Plik wideo</td>
+      <td>VLC Player</td>
+      <td>Multimedia</td>
+    </tr>
+  </tbody>
 </table>
+</div>
 
-<p style="text-align:center; margin-top:20px;">© Polina Kotliarevska</p>
+<div class="source">Źródło: własne</div>
 
 </body>
 </html>
+
+
